@@ -1,0 +1,19 @@
+header {
+    position: relative;
+    left: 450px;
+}
+.navbar{
+    position: relative;
+    left: 250px;
+    margin-top: 50px;
+    display: flex;
+}
+.navbar ul{
+    display: flex;
+    gap: 20px;
+}
+
+footer {
+    position: relative;
+    margin-top: 200px;
+}

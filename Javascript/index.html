@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormDocument</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form class="form">
+        <p class="title">Register</p>
+        <p class="message">Signup now and get full access to our app.</p>
+        <div class="flex">
+            <label>
+                <input class="input" type="text" placeholder="" id="firstName" name="firstName" onchange="FirstName()">
+                <span>Firstname</span>
+                <span class="error" id="firstNameError"></span>
+            </label>
+    
+            <label>
+                <input class="input" type="text" placeholder="" id="lastName" name="lastName" onchange="LastName()">
+                <span>Lastname</span>
+                <span class="error" id="lastNameError"></span>
+            </label>
+        </div>  
+                
+        <label>
+            <input class="input" type="number" placeholder="" id="mobileNo" name="mobileNo" onchange="MobileNo()">
+            <span>Phone Number</span>
+            <span class="error" id="mobileNoError"></span>
+        </label> 
+            
+        <label>
+            <input class="input" type="password" placeholder="" id="password" name="password" onchange="Password()">
+            <span>Password</span>
+            <span class="error" id="passwordError"></span>
+        </label>
+        <label>
+            <input class="input" type="password" placeholder="" id="cpassword" name="cpassword" onchange="ConfirmPassword()">
+            <span>Confirm password</span>
+            <span class="error" id="cpasswordError"></span>
+        </label>
+        <button class="submit" type="button" onclick="finalValidation()">Submit</button>
+        <p class="signin">Already have an account? <a href="#">Sign in</a></p>
+    </form>
+
+    <script src="./app.js"></script>
+</body>
+</html>
