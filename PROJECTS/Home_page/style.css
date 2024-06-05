@@ -67,6 +67,7 @@ body{
     font-size: 22px;
     top: 4px;
     position: relative;
+    left: 30px;
 }
 .para2{
     background-color: green;
@@ -225,8 +226,8 @@ main .promotions{
 }
 main .promotions .hat-girl-image img{
     height: 350px;
-    width: 750px;
-    margin-left: 69px;
+    width: 550px;
+    margin-left: 49px;
     margin-top: -30px;
 }
 main .promotions .fashion h5{
@@ -581,18 +582,20 @@ main .deals .deal1{
     background-image: url(/assets/deals-1.jpg);
     background-repeat: no-repeat;
     background-size: 600px;
-    width: 650px;
+    width: 550px;
 }
 main .deals .deal1 h3{
     position: relative;
     top: 40px;
     left: 40px;
+    width: 250px;
     color: #218F76;
 }
 main .deals .deal1 h5{
     position: relative;
     left: 40px;
     top: 28px;
+    width: 250px;
     font-weight: lighter;
 }
 main .deals .deal1 .summer{
@@ -665,19 +668,21 @@ main .deals .deal2{
     background-image: url(/assets/deals-1.jpg);
     background-repeat: no-repeat;
     background-size: 650px;
-    width: 700px;
+    width: 550px;
     margin-left: -40px;
 }
 main .deals .deal2 h3{
     position: relative;
     top: 40px;
     left: 40px;
+    width: 250px;
     color: #218F76;
 }
 main .deals .deal2 h5{
     position: relative;
     left: 40px;
     top: 28px;
+    width: 250px;
     font-weight: lighter;
 }
 main .deals .deal2 .summer{
@@ -800,7 +805,7 @@ main .first-color{
     width: 50px;
     border: 1.7px solid #1fa485;
     top: -60px;
-    left: -648px;
+    left: -518px;
 }
 main .first-hr{
     position: relative;
@@ -814,7 +819,7 @@ main .second-color{
     width: 50px;
     border: 1.7px solid #1fa485;
     top: -71px;
-    left: -307px;
+    left: -177px;
 }
 main .second-hr{
     position: relative;
@@ -828,7 +833,7 @@ main .third-color{
     width: 50px;
     border: 1.7px solid #1fa485;
     top: -82px;
-    left: 32px;
+    left: 162px;
 }
 main .third-hr{
     position: relative;
@@ -842,7 +847,7 @@ main .fourth-color{
     width: 50px;
     border: 1.7px solid #1fa485;
     top: -94px;
-    left: 367px;
+    left: 497px;
 }
 main .fourth-hr{
     position: relative;

@@ -25,20 +25,23 @@
         </div>  
                 
         <label>
-            <input class="input" type="number" placeholder="" id="mobileNo" name="mobileNo" onchange="MobileNo()">
+            <input class="input" type="tel" placeholder="" id="mobileNo" name="mobileNo" onchange="MobileNo()">
             <span>Phone Number</span>
             <span class="error" id="mobileNoError"></span>
+            <span class="true" id="mobiletrue"></span>
         </label> 
             
         <label>
             <input class="input" type="password" placeholder="" id="password" name="password" onchange="Password()">
             <span>Password</span>
             <span class="error" id="passwordError"></span>
+            <span class="true" id="passwordtrue"></span>
         </label>
         <label>
             <input class="input" type="password" placeholder="" id="cpassword" name="cpassword" onchange="ConfirmPassword()">
             <span>Confirm password</span>
             <span class="error" id="cpasswordError"></span>
+            <span class="true" id="cpasswordtrue"></span>
         </label>
         <button class="submit" type="button" onclick="finalValidation()">Submit</button>
         <p class="signin">Already have an account? <a href="#">Sign in</a></p>

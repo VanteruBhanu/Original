@@ -1,87 +1,80 @@
-function FirstName() {
-    const firstName = document.getElementById('firstName').value;
+function validateForm() {
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const mobileNo = document.getElementById('mobileNo').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const cpassword = document.getElementById('cpassword').value.trim();
+
     const firstNameError = document.getElementById('firstNameError');
-    if (firstName.trim() === "") {
+    const lastNameError = document.getElementById('lastNameError');
+    const mobileNoError = document.getElementById('mobileNoError');
+    const passwordError = document.getElementById('passwordError');
+    const cpasswordError = document.getElementById('cpasswordError');
+
+    let isValid = true;
+
+    if (firstName === "") {
         firstNameError.textContent = "First name cannot be empty";
-        return false;
+        isValid = false;
+    } else if (!isNaN(firstName)) {
+        firstNameError.textContent = "Enter only alphabets";
+        isValid = false;
     } else {
         firstNameError.textContent = "";
     }
-    return true;
-}
 
-function LastName() {
-    const lastName = document.getElementById('lastName').value;
-    const lastNameError = document.getElementById('lastNameError');
-    if (lastName.trim() === "") {
+    if (lastName === "") {
         lastNameError.textContent = "Last name cannot be empty";
-        return false;
+        isValid = false;
+    } else if (!isNaN(lastName)) {
+        lastNameError.textContent = "Enter only alphabets";
+        isValid = false;
     } else {
         lastNameError.textContent = "";
     }
-    return true;
-}
 
-function MobileNo() {
-    const mobileNo = document.getElementById('mobileNo').value;
-    const mobileNoError = document.getElementById('mobileNoError');
-    // Example: simple validation for 10-digit phone number
-    if(mobileNo.trim()==""){
+    if (mobileNo === "") {
         mobileNoError.textContent = "Mobile Number cannot be empty";
-        return false;
-    }
-    else if (mobileNo.length!=10) {
+        isValid = false;
+    } else if (mobileNo.length != 10) {
         mobileNoError.textContent = "Enter a valid 10-digit phone number";
-        return false;
-    }
-    else if(mobileNo.charAt(0)<'6' || mobileNo.charAt(0)>'9'){
-        mobileNoError.textContent="Phone Number should start between the digits 6 and 9";
-        return false;
-    }
-     else {
+        isValid = false;
+    } else if (mobileNo.charAt(0) < '6' || mobileNo.charAt(0) > '9') {
+        mobileNoError.textContent = "Phone Number should start between the digits 6 and 9";
+        isValid = false;
+    } else {
         mobileNoError.textContent = "";
+        document.getElementById('mobiletrue').textContent = "You have entered correct format of mobile number";
     }
-    return true;
-}
 
-function Password() {
-    const password = document.getElementById('password').value;
-    const passwordError = document.getElementById('passwordError');
-    if(password.trim()==""){
+    if (password === "") {
         passwordError.textContent = "Password cannot be empty";
-        return false;
-    }
-    else if (password.length <8 || password.length>15) {
+        isValid = false;
+    } else if (password.length < 8 || password.length > 15) {
         passwordError.textContent = "Password must be at least 8 characters long and a maximum of 15";
-        return false;
+        isValid = false;
     } else {
         passwordError.textContent = "";
+        document.getElementById('passwordtrue').textContent = "You have entered correct format of password";
     }
-    return true;
-}
 
-function ConfirmPassword() {
-    const password = document.getElementById('password').value;
-    const cpassword = document.getElementById('cpassword').value;
-    const cpasswordError = document.getElementById('cpasswordError');
-    if(cpassword.trim()==""){
+    if (cpassword === "") {
         cpasswordError.textContent = "Confirm Password cannot be empty";
-        return false;
-    }
-    else if (password !== cpassword) {
+        isValid = false;
+    } else if (password !== cpassword) {
         cpasswordError.textContent = "Passwords do not match";
-        return false;
+        isValid = false;
     } else {
         cpasswordError.textContent = "";
+        document.getElementById('cpasswordtrue').textContent = "Passwords are matched";
     }
-    return true;
+
+    if (isValid) {
+        window.location.href = "dummy.html";
+    }
+
+    return isValid;
+
 }
 
-function finalValidation() {
-    if (FirstName() && LastName() && MobileNo() && Password() && ConfirmPassword()) {
-        // Here you can add the code to actually submit the form, e.g., form.submit()
-        window.location.href="https://www.achieversit.com/"
-        return true;
-    }
-    return false;
-}
+
